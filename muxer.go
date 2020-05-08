@@ -5,6 +5,6 @@ import (
 )
 
 type Multiplexer interface {
-	RegisterFunc(path string, f func(http.ResponseWriter, *http.Request), method string)
+	Register(path string, view View, controller Controller)
 	GetHandler() http.Handler
 }
